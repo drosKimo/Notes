@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.AboutPage"
@@ -6,12 +6,13 @@
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
         <Image Source="xamarin_logo.png"
-               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#2196F3}"
+               BackgroundColor="{StaticResource AppPrimaryColor}"
+               Opacity="0.85"
                VerticalOptions="Center"
                HeightRequest="64" />
         <!-- Layout children vertically -->
         <StackLayout Grid.Row="1"
-                     Margin="20"
+                     Margin="{StaticResource PageMargin}"
                      Spacing="20">
             <Label FontSize="22">
                 <Label.FormattedText>
